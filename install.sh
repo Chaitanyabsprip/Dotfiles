@@ -4,7 +4,7 @@ mkdir ~/Programs ~/.config
 mv ./bin ~/bin -r
 
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
-sudo pacman -S base-devel cmake unzip
+sudo pacman -S base-devel cmake unzip ripgrep fd
 
 # yay
 cd ~/Programs
