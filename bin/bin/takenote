@@ -1,0 +1,15 @@
+#!/bin/fish
+
+set dat (date +%Y-%m-%d)
+set tim (date +%H:%M)
+set noteFilename "/home/chaitanya/notes/src/note-$dat.md"
+
+if test ! -e $noteFilename
+  echo "# Notes for $dat" > $noteFilename
+end
+
+nvim -c "norm Go" \
+  -c "norm Go## $tim" \
+  -c "norm G2o" \
+  -c "norm zz" \
+  -c "startinsert" $noteFilename

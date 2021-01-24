@@ -1,0 +1,11 @@
+nmap <Leader>vv <Plug>VimwikiIndex
+nmap <Leader>vt <Plug>VimwikiTabIndex
+nmap <Leader>vs <Plug>VimwikiUISelect 
+nmap <Leader>vi <Plug>VimwikiDiaryIndex
+nmap <Leader>vh <Plug>Vimwiki2HTML
+nmap <Leader>vhb <Plug>Vimwiki2HTMLBrowse
+nmap <Leader>v<Leader>v <Plug>VimwikiMakeDiaryNote
+nmap <Leader>v<Leader>t <Plug>VimwikiTabMakeDiaryNote
+nmap <Leader>v<Leader>y <Plug>VimwikiMakeYesterdayDiaryNote
+nmap <Leader>v<Leader>m <Plug>VimwikiMakeTomorrowDiaryNote
+nmap <Leader>v<Leader>i <Plug>VimwikiDiaryGenerateLinks

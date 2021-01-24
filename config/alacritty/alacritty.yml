@@ -1,0 +1,137 @@
+import:
+  - /home/chaitanya/.config/alacritty/themes/dracula.yml
+
+env:
+  TERM: alacritty
+################################################################################
+#   Window Settings
+################################################################################
+#
+window:
+  dimensions:
+    columns: 130
+    lines: 43
+  padding:
+    x: 8
+    y: 8
+  decorations: none
+  startup_mode: Windowed
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+background_opacity: 0.1
+################################################################################
+#   Shell
+################################################################################
+shell:
+  program: fish
+  args:
+    - --login
+################################################################################
+#   Font
+################################################################################
+#
+font:
+  size: 8
+  normal:
+    family: FiraCode Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: FiraCode Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: FiraCode Nerd Font Mono
+    style: Italic
+
+  offset:
+    x: 1
+    y: 1
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+################################################################################
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+draw_bold_text_with_bright_colors: true
+
+################################################################################
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+
+live_config_reload: true
+################################################################################
+#   Key Bindings
+################################################################################
+#
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  # - { key: Add, mods: Control, action: IncreaseFontSize }
+  # - { key: Subtract, mods: Control, action: DecreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: N, mods: Control, action: SpawnNewInstance }
+  # - {
+  #     key: M,
+  #     mods: Control,
+  #     command:
+  #       {
+  #         program: "alacritty",
+  #         args:
+  #           [
+  #             "-o",
+  #             "window.dimensions.columns=70",
+  #             "window.dimensions.lines=30",
+  #             "-t",
+  #             "notetaker_window",
+  #             "-e",
+  #             "fish",
+  #             "/home/chaitanya/.notetaker",
+  #           ],
+  #       },
+  #   }
+################################################################################
+#  Colors (Iceberg Dark)
+################################################################################
+#
+# colors:
+#   # Default colors
+#   primary:
+#     background: "#161821"
+#     foreground: "#d2d4de"
+
+#   # Normal colors
+#   normal:
+#     black: "#161821"
+#     red: "#e27878"
+#     green: "#b4be82"
+#     yellow: "#e2a478"
+#     blue: "#84a0c6"
+#     magenta: "#a093c7"
+#     cyan: "#89b8c2"
+#     white: "#c6c8d1"
+
+#   # Bright colors
+#   bright:
+#     black: "#6b7089"
+#     red: "#e98989"
+#     green: "#c0ca8e"
+#     yellow: "#e9b189"
+#     blue: "#91acd1"
+#     magenta: "#ada0d3"
+#     cyan: "#95c4ce"
+#     white: "#d2d4de"

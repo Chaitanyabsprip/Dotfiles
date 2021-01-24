@@ -1,0 +1,15 @@
+#!/bin/fish
+
+set noteFilename "/home/chaitanya/vimwiki/Todo.wiki"
+
+if test ! -e $noteFilename
+  printf "# TODO\n#\n" > $noteFilename
+  set placeholder "norm Go"
+else
+  set placeholder "norm zz"
+end
+
+nvim -c $placeholder \
+  -c "norm zz" \
+  -c "norm Go[]  " \
+  -c "startinsert" $noteFilename

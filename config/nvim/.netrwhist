@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/chaitanya/.config/rofi/powermenu/styles'
+let g:netrw_dirhist_1='/home/chaitanya/.config/rofi/powermenu'
+let g:netrw_dirhist_0='/home/chaitanya/.config/rofi'
+let g:netrw_dirhist_9='/'
+let g:netrw_dirhist_8='/home'
+let g:netrw_dirhist_7='/home/chaitanya'
+let g:netrw_dirhist_6='/home/chaitanya/.config'
+let g:netrw_dirhist_5='/home/chaitanya/.config/nvim'
+let g:netrw_dirhist_4='/home/chaitanya/.config/nvim/settings'
+let g:netrw_dirhist_3='/home/chaitanya/.config/nvim/settings/plugs'

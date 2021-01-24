@@ -1,0 +1,1 @@
+/home/chaitanya/.local/share/nvim/plugged/fzf/shell/key-bindings.fish
