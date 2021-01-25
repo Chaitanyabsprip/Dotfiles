@@ -1,11 +1,14 @@
 #! /bin/bash
 
 mkdir ~/Programs ~/.config
+cd ~/dotfiles
+pwd
 mv ./bin ~/bin
 
+sudp pacman -Syu
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
-sudo pacman -S gcc build-essential
-sudo pacman -S base-devel cmake unzip ripgrep fd cowsay fortune
+sudo pacman -S gcc
+sudo pacman -S base-devel cmake unzip ripgrep fd cowsay fortune-mod
 
 # yay
 cd ~/Programs
@@ -82,4 +85,4 @@ yay -S vscodium-bin
 
 # starship
 curl -fsSL https://starship.rs/install.sh | bash
-ln -s ./.bashrc ~/.bashrc
+ln -sf ./.bashrc ~/.bashrc
