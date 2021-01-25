@@ -123,6 +123,7 @@ source ~/.bash_completion/alacritty
 export PATH="$PATH:/home/chaitanya/Android/Sdk/tools/bin"
 export PATH="$PATH:/home/chaitanya/Android/Sdk/platform-tools"
 export PATH="$PATH:/home/chaitanya/flutter/bin"
+export PATH="$PATH:/home/chaitanya/bin"
 
 eval "$(starship init bash)"
 
