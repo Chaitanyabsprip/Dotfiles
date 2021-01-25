@@ -46,7 +46,7 @@ sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf
 echo "---------------------------Installing qtile------------------------------"
 sudo pacman -S qtile
 cd ~/dotfiles
-ln ~/dotfiles/config/qtile ~/.config/qtile
+ln -sf ~/dotfiles/config/qtile ~/.config/qtile
 
 # alacritty
 echo "---------------------------Installing alacritty--------------------------"
