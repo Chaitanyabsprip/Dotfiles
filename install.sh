@@ -4,22 +4,22 @@ mkdir ~/Programs ~/.config
 mv ./bin ~/bin -r
 
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
-sudo pacman -S base-devel cmake unzip ripgrep fd
+sudo pacman -S base-devel cmake unzip ripgrep fd cowsay fortune
 
 # yay
 cd ~/Programs
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
-makepkg -si
+makepkg -sfi
 cd ~
 
 # picom ibhagwan
-sudo yay -S picom-ibhagwan-git
-ln -s ./config/picom ~/.config/picom
+yay -S picom-ibhagwan-git
+ln -sf ./config/picom ~/.config/picom
 
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
-sudo ln -s ./lightdm.conf /etc/lightdm/lightdm.conf
+sudo ln -sf ./lightdm.conf /etc/lightdm/lightdm.conf
 
 # qtile
 sudo pacman -S qtile
@@ -37,9 +37,9 @@ sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
 sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
-
 mkdir -p $fish_complete_path[1]
 cp extra/completions/alacritty.fish $fish_complete_path[1]/alacritty.fish
+ln -sf ./config/alacritty ~/.config/alacritty
 
 # vimb
 sudo pacman -S vimb
@@ -53,6 +53,8 @@ mkdir build && cd build
 ../configure
 make
 sudo make install
+ln -sf ./config/rofi ~/.config/rofi
+ln -sf ./config/rofi.old ~/.config/rofi.old
 
 # Neovim
 cd ~/Programs
@@ -62,3 +64,10 @@ make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 ln -sf ./config/nvim ~/.config/nvim
 
+#flutter
+yay -S android-sftudio
+yay -S vscodium-bin
+
+# starship
+curl -fsSL https://starship.rs/install.sh | bash
+ln -s ./.bashrc ~/.bashrc
