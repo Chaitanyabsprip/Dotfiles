@@ -1,5 +1,6 @@
 ### EXPORT ###
 export PATH="$PATH:/home/chaitanya/.local/bin"
+export PATH="$PATH:/home/chaitanya/bin"
 export ANDROID_SDK_ROOT="/home/chaitanya/Android/Sdk/"
 export ANDROID_HOME="/home/chaitanya/Android/Sdk/"
 export ANDROID_AVD_HOME="/home/chaitanya/.android/avd"
