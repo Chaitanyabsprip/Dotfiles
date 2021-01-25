@@ -1,7 +1,7 @@
 #! /bin/bash
 
 mkdir ~/Programs ~/.config
-mv ./bin ~/bin -r
+mv ./bin ~/bin
 
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
 sudo pacman -S gcc build-essential
