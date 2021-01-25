@@ -5,20 +5,20 @@ mkdir ~/Programs ~/.config
 cd ~/dotfiles
 pwd
 echo "---------------------------Moving bin Folder-----------------------------"
-mv ./bin ~/bin
+mv ./bin ~/
 
 echo "---------------------------Updating System-------------------------------"
 sudo pacman -Syu
-echo "----------Installing xorg nitrogen firefox vim and xf86-video-intel------"
-sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
+echo "----------------------------Installing Packages--------------------------"
+sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim cmake\
+  unzip ripgrep fd cowsay fortune freetype2 fontconfig pkg-config make libxcb\
+  gzip lightdm lightdm-gtk-greeter qtile vimb xcb-util-xrm check\
+  libxkbcommon-x11 startup-notification
 echo "------------------------Installing gcc and base-devel--------------------"
 sudo pacman -S --needed gcc base-devel
-echo "---------------Installing cmake ripgrep fd cowsay and fortune------------"
-sudo pacman -S cmake unzip ripgrep fd cowsay fortune-mod
 
 # paru
 echo "---------------------------Installing paru-------------------------------"
-sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb rustup gzip
 cd ~/Programs
 pwd
 git clone https://aur.archlinux.org/paru.git
@@ -36,7 +36,6 @@ ln -sf ~/dotfiles/config/picom ~/.config/picom
 
 # lightdm
 echo "---------------------------Installing lightdm----------------------------"
-sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
 sudo systemctl enable lightdm.service
 cd ~/dotfiles
@@ -44,7 +43,6 @@ sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf
 
 # qtile
 echo "---------------------------Installing qtile------------------------------"
-sudo pacman -S qtile
 cd ~/dotfiles
 ln -sf ~/dotfiles/config/qtile ~/.config/qtile
 
@@ -69,13 +67,8 @@ cp extra/completions/alacritty.fish $fish_complete_path[1]/alacritty.fish
 cd ~/dotfiles
 ln -sf ~/dotfiles/config/alacritty ~/.config/alacritty
 
-# vimb
-echo "---------------------------Installing vimb-------------------------------"
-sudo pacman -S vimb
-
 # rofi
 echo "---------------------------Installing rofi-------------------------------"
-sudo pacman -S xcb-util-xrm check libxkbcommon-x11 startup-notification
 cd ~/Programs
 pwd
 git clone --recursive https://github.com/DaveDavenport/rofi
