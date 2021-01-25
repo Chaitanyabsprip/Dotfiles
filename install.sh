@@ -1,29 +1,38 @@
 #! /bin/bash
 
+echo "---------------------------Creating Folders------------------------------"
 mkdir ~/Programs ~/.config
 cd ~/dotfiles
 pwd
+echo "---------------------------Moving bin Folder-----------------------------"
 mv ./bin ~/bin
 
+echo "---------------------------Updating System-------------------------------"
 sudo pacman -Syu
+echo "----------Installing xorg nitrogen firefox vim and xf86-video-intel------"
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
+echo "------------------------Installing gcc and base-devel--------------------"
 sudo pacman -S --needed gcc base-devel
+echo "---------------Installing cmake ripgrep fd cowsay and fortune------------"
 sudo pacman -S cmake unzip ripgrep fd cowsay fortune-mod
 
 # paru
+echo "---------------------------Installing paru-------------------------------"
 cd ~/Programs
 pwd
 git clone https://aur.archlinux.org/paru.git
-cd ~/Programs/paru-git
+cd ~/Programs/paru
 pwd
 makepkg -sfi
 
 # picom ibhagwan
+echo "---------------------------Installing picom-ibhagwan---------------------"
 paru -S picom-ibhagwan-git
 cd ~/dotfiles
 ln -sf ./config/picom ~/.config/picom
 
 # lightdm
+echo "---------------------------Installing lightdm----------------------------"
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
 sudo systemctl enable lightdm.service
@@ -31,11 +40,13 @@ cd ~/dotfiles
 sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf
 
 # qtile
+echo "---------------------------Installing qtile------------------------------"
 sudo pacman -S qtile
 cd ~/dotfiles
 ln ./config/qtile ~/.config/qtile
 
 # alacritty
+echo "---------------------------Installing alacritty--------------------------"
 sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb rustup gzip
 cd ~/Programs
 pwd
@@ -57,9 +68,11 @@ cd ~/dotfiles
 ln -sf ./config/alacritty ~/.config/alacritty
 
 # vimb
+echo "---------------------------Installing vimb-------------------------------"
 sudo pacman -S vimb
 
 # rofi
+echo "---------------------------Installing rofi-------------------------------"
 sudo pacman -S xcb-util-xrm check libxkbcommon-x11 startup-notification
 cd ~/Programs
 pwd
@@ -76,6 +89,7 @@ ln -sf ./config/rofi ~/.config/rofi
 ln -sf ./config/rofi.old ~/.config/rofi.old
 
 # Neovim
+echo "---------------------------Installing neovim-----------------------------"
 cd ~/Programs
 pwd
 git clone https://github.com/neovim/neovim
@@ -87,10 +101,12 @@ cd ~/dotfiles
 ln -sf ./config/nvim ~/.config/nvim
 
 #flutter
+echo "--------------------Installing android studio and vscode-----------------"
 paru -S android-studio
 paru -S vscodium-bin
 
 # starship
+echo "---------------------------Installing startship--------------------------"
 curl -fsSL https://starship.rs/install.sh | bash
 cd ~/dotfiles
 ln -sf ./.bashrc ~/.bashrc
