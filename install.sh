@@ -33,15 +33,15 @@ ln ./config/qtile ~/.config/qtile
 
 # alacritty
 sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb rustup gzip
-sleep 1
-rustup override set stable
-sleep 1
-rustup update stable
 cd ~/Programs
 pwd
 git clone https://github.com/alacritty/alacritty
 cd ~/Programs/alacritty
 pwd
+sleep 1
+rustup override set stable
+sleep 1
+rustup update stable
 cargo build --release
 sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
 sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
