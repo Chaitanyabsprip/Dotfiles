@@ -23,6 +23,8 @@ pwd
 git clone https://aur.archlinux.org/paru.git
 cd ~/Programs/paru
 pwd
+rustup override set stable
+rustup update stable
 makepkg -sfi
 
 # picom ibhagwan
