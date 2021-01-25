@@ -13,7 +13,7 @@ echo "----------------------------Installing Packages--------------------------"
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim cmake\
   unzip ripgrep fd cowsay fortune freetype2 fontconfig pkg-config make libxcb\
   gzip lightdm lightdm-gtk-greeter qtile vimb xcb-util-xrm check\
-  libxkbcommon-x11 startup-notification pcmanfm networkmanager
+  libxkbcommon-x11 startup-notification pcmanfm networkmanager htop
 echo "------------------------Installing gcc and base-devel--------------------"
 sudo pacman -S --needed gcc base-devel
 
