@@ -7,28 +7,32 @@ mv ./bin ~/bin
 
 sudo pacman -Syu
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
-sudo pacman -S gcc
-sudo pacman -S base-devel cmake unzip ripgrep fd cowsay fortune-mod
+sudo pacman -S --needed gcc base-devel
+sudo pacman -S cmake unzip ripgrep fd cowsay fortune-mod
 
-# yay
+# paru
 cd ~/Programs
 pwd
-git clone https://aur.archlinux.org/yay-git.git
-cd ~/Programs/yay-git
+git clone https://aur.archlinux.org/paru.git
+cd ~/Programs/paru-git
 pwd
 makepkg -sfi
 
 # picom ibhagwan
-yay -S picom-ibhagwan-git
+paru -S picom-ibhagwan-git
+cd ~/dotfiles
 ln -sf ./config/picom ~/.config/picom
 
 # lightdm
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
-sudo ln -sf ./lightdm.conf /etc/lightdm/lightdm.conf
+sudo systemctl enable lightdm.service
+cd ~/dotfiles
+sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf
 
 # qtile
 sudo pacman -S qtile
+cd ~/dotfiles
 ln ./config/qtile ~/.config/qtile
 
 # alacritty
@@ -49,6 +53,7 @@ sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 mkdir -p $fish_complete_path[1]
 cp extra/completions/alacritty.fish $fish_complete_path[1]/alacritty.fish
+cd ~/dotfiles
 ln -sf ./config/alacritty ~/.config/alacritty
 
 # vimb
@@ -66,6 +71,7 @@ mkdir build && cd build
 ../configure
 make
 sudo make install
+cd ~/dotfiles
 ln -sf ./config/rofi ~/.config/rofi
 ln -sf ./config/rofi.old ~/.config/rofi.old
 
@@ -77,12 +83,14 @@ cd ~/Programs/neovim
 pwd
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
+cd ~/dotfiles
 ln -sf ./config/nvim ~/.config/nvim
 
 #flutter
-yay -S android-sftudio
-yay -S vscodium-bin
+paru -S android-studio
+paru -S vscodium-bin
 
 # starship
 curl -fsSL https://starship.rs/install.sh | bash
+cd ~/dotfiles
 ln -sf ./.bashrc ~/.bashrc
