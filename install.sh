@@ -5,7 +5,7 @@ cd ~/dotfiles
 pwd
 mv ./bin ~/bin
 
-sudp pacman -Syu
+sudo pacman -Syu
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
 sudo pacman -S gcc
 sudo pacman -S base-devel cmake unzip ripgrep fd cowsay fortune-mod
