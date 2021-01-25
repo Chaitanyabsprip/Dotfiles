@@ -4,14 +4,14 @@ mkdir ~/Programs ~/.config
 mv ./bin ~/bin -r
 
 sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
+sudo pacman -S gcc build-essential
 sudo pacman -S base-devel cmake unzip ripgrep fd cowsay fortune
 
 # yay
 cd ~/Programs
 git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
+cd ~/Programs/yay-git
 makepkg -sfi
-cd ~
 
 # picom ibhagwan
 yay -S picom-ibhagwan-git
@@ -31,7 +31,7 @@ rustup override set stable
 rustup update stable
 cd ~/Programs
 git clone https://github.com/alacritty/alacritty
-cd alacritty
+cd ~/Programs/alacritty
 cargo build --release
 sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
 sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
@@ -46,8 +46,9 @@ sudo pacman -S vimb
 
 # rofi
 sudo pacman -S xcb-util-xrm check libxkbcommon-x11 startup-notification
+cd ~/Programs
 git clone --recursive https://github.com/DaveDavenport/rofi
-cd rofi/
+cd ~/Programs/rofi/
 autoreconf -i
 mkdir build && cd build
 ../configure
@@ -59,7 +60,7 @@ ln -sf ./config/rofi.old ~/.config/rofi.old
 # Neovim
 cd ~/Programs
 git clone https://github.com/neovim/neovim
-cd neovim
+cd ~/Programs/neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 ln -sf ./config/nvim ~/.config/nvim
