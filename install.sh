@@ -19,6 +19,7 @@ makepkg -sfi
 yay -S picom-ibhagwan-git
 ln -sf ./config/picom ~/.config/picom
 
+# lightdm
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
 sudo ln -sf ./lightdm.conf /etc/lightdm/lightdm.conf
@@ -29,7 +30,9 @@ ln ./config/qtile ~/.config/qtile
 
 # alacritty
 sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb rustup gzip
+sleep 1
 rustup override set stable
+sleep 1
 rustup update stable
 cd ~/Programs
 pwd
