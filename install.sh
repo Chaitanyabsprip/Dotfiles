@@ -32,7 +32,7 @@ makepkg -sfi
 echo "---------------------------Installing picom-ibhagwan---------------------"
 paru -S picom-ibhagwan-git
 cd ~/dotfiles
-ln -sf ~/dotfiles/config/picom ~/.config/picom
+# ln -sf ~/dotfiles/config/picom ~/.config/picom
 
 # lightdm
 echo "---------------------------Installing lightdm----------------------------"
@@ -46,7 +46,7 @@ sudo cp ./lightdm.conf /etc/lightdm/lightdm.conf
 echo "---------------------------Installing qtile------------------------------"
 sudo pacman -S qtile
 cd ~/dotfiles
-ln -sf ~/dotfiles/config/qtile ~/.config/qtile
+# ln -sf ~/dotfiles/config/qtile ~/.config/qtile
 
 # alacritty
 echo "---------------------------Installing alacritty--------------------------"
@@ -67,7 +67,7 @@ sudo update-desktop-database
 mkdir -p $fish_complete_path[1]
 cp extra/completions/alacritty.fish $fish_complete_path[1]/alacritty.fish
 cd ~/dotfiles
-ln -sf ~/dotfiles/config/alacritty ~/.config/alacritty
+# ln -sf ~/dotfiles/config/alacritty ~/.config/alacritty
 
 # vimb
 echo "---------------------------Installing vimb-------------------------------"
@@ -87,8 +87,8 @@ mkdir build && cd build
 make
 sudo make install
 cd ~/dotfiles
-ln -sf ~/dotfiles/config/rofi ~/.config/rofi
-ln -sf ~/dotfiles/config/rofi.old ~/.config/rofi.old
+# ln -sf ~/dotfiles/config/rofi ~/.config/rofi
+# ln -sf ~/dotfiles/config/rofi.old ~/.config/rofi.old
 
 # Neovim
 echo "---------------------------Installing neovim-----------------------------"
@@ -100,7 +100,7 @@ pwd
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 cd ~/dotfiles
-ln -sf ~/dotfiles/config/nvim ~/.config/nvim
+# ln -sf ~/dotfiles/config/nvim ~/.config/nvim
 
 #flutter
 echo "--------------------Installing android studio and vscode-----------------"
