@@ -10,10 +10,7 @@ mv ./bin ~/
 echo "---------------------------Updating System-------------------------------"
 sudo pacman -Syu
 echo "----------------------------Installing Packages--------------------------"
-sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim cmake\
-  unzip ripgrep fd cowsay fortune freetype2 fontconfig pkg-config make libxcb\
-  gzip lightdm lightdm-gtk-greeter qtile vimb xcb-util-xrm check\
-  libxkbcommon-x11 startup-notification pcmanfm networkmanager htop
+sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim cmake unzip ripgrep fd cowsay fortune freetype2 fontconfig pkg-config make libxcb gzip lightdm lightdm-gtk-greeter qtile vimb xcb-util-xrm check libxkbcommon-x11 startup-notification pcmanfm networkmanager htop lightdm lightdm-gtk-greeter rustup xkbcommon
 echo "------------------------Installing gcc and base-devel--------------------"
 sudo pacman -S --needed gcc base-devel
 
