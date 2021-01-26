@@ -106,3 +106,10 @@ curl -fsSL https://starship.rs/install.sh | bash
 cd ~/dotfiles
 # ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/config ~/.config
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
+ln -sf ~/dotfiles/.xmonad ~/.xmonad
+ln -sf ~/dotfiles/.vim ~/.vim
+ln -sf ~/dotfiles/.netrc ~/.netrc
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
