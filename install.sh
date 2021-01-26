@@ -14,7 +14,7 @@ sudo pacman -S xorg xorg-xinit nitrogen firefox xf86-video-intel vim
 echo "------------------------Installing gcc and base-devel--------------------"
 sudo pacman -S --needed gcc base-devel
 echo "---------------Installing cmake ripgrep fd cowsay and fortune------------"
-sudo pacman -S cmake unzip ripgrep fd cowsay fortune-mod
+sudo pacman -S cmake unzip ripgrep fd cowsay fortune-mod htop xclip pcmanfm
 
 # paru
 echo "---------------------------Installing paru-------------------------------"
