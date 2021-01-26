@@ -105,3 +105,4 @@ echo "---------------------------Installing startship--------------------------"
 curl -fsSL https://starship.rs/install.sh | bash
 cd ~/dotfiles
 # ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/config ~/.config
